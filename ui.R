@@ -13,7 +13,15 @@ shinyUI(fluidPage(
                    "Slide Temperature: ",
                    min = 50,
                    max = 100,
-                   value = c(60,80), width = "1400px")
+                   value = c(60,80), width = "1400px"),
+       selectInput(
+         inputId = "Month",
+         label = "Choose Month:",
+         choices = c("May", "June", "July", "August", "September"),
+         selected = "May",
+         multiple = TRUE
+       ),
+       submitButton("Submit")
        
     ),
     
